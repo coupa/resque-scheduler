@@ -2,7 +2,7 @@
 require_relative 'test_helper'
 
 context 'scheduling jobs with hooks' do
-  setup { Resque.data_store.redis.flushall }
+  setup { Resque.redis.flushall }
 
   test 'before_schedule hook that does not return false should be enqueued' do
     enqueue_time = Time.now
