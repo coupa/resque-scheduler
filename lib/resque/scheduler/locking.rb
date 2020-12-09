@@ -100,7 +100,7 @@ module Resque
       end
 
       def redis_master_version
-        ::Resque.data_store.redis.info['redis_version'].to_f
+        ::Resque.redis.info['redis_version'].to_f
       end
     end
   end
